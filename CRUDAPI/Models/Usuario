@@ -1,0 +1,27 @@
+namespace CRUDAPI.Models
+{
+[Table("Usuarios")]
+    public class Usuario
+    {
+        [Key]
+        public int Id { get; set; }
+        [Column(TypeName = "varchar(80)")]
+        [MaxLength(80)]
+        [Required]
+        public string? U_NOM { get; set; }
+        [Column(TypeName = "varchar(30)")]
+        [MaxLength(30)]
+        [Required]
+        public string? U_USU { get; set; }
+        [Column(TypeName = "varchar(20)")]
+        [MaxLength(20)]
+        [Required]
+        public string? U_SEN { get; set; }
+        public DateTime U_DAT { get; set; }
+        [Column(TypeName = "varchar(1)")]
+        [MaxLength(1)]
+        public string? U_PRI { get; set; }
+    }
+    // [Column(TypeName = "decimal(5, 2)")] para decimais e [Precision(14, 2)]
+
+}
